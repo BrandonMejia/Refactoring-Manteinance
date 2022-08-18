@@ -15,8 +15,6 @@ import pieces.Rook;
 import ui.ChessPanel;
 
 import java.awt.GridLayout;
-import java.io.Serializable;
-import java.util.List;
 // -------------------------------------------------------------------------
 /**
  * The panel that represents the Chess game board. Contains a few methods that
@@ -86,8 +84,8 @@ public class ChessGameBoard extends JPanel{
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public List<ChessGamePiece> getAllWhitePieces(){
-        List<ChessGamePiece> whitePieces = new ArrayList<>();
+    public ArrayList<ChessGamePiece> getAllWhitePieces(){
+        ArrayList<ChessGamePiece> whitePieces = new ArrayList<ChessGamePiece>();
         for ( int i = 0; i < 8; i++ ){
             for ( int j = 0; j < 8; j++ ){
                 if ( chessCells[i][j].getPieceOnSquare() != null
@@ -244,7 +242,8 @@ public class ChessGameBoard extends JPanel{
      * @author Myles David (davidmm2)
      * @version 2010.11.16
      */
-    private class BoardListener implements MouseListener, Serializable
+    private class BoardListener
+        implements MouseListener
     {
         /**
          * Do an action when the left mouse button is clicked.

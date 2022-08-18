@@ -47,7 +47,7 @@ public class King
         ArrayList<String> southMoves = calculateSouthMoves( board, 1 );
         ArrayList<String> eastMoves = calculateEastMoves( board, 1 );
         ArrayList<String> westMoves = calculateWestMoves( board, 1 );
-        ArrayList<String> allMoves = new ArrayList<String>();
+        ArrayList<String> allMoves = new ArrayList<>();
         allMoves.addAll( northEastMoves );
         allMoves.addAll( northWestMoves );
         allMoves.addAll( southWestMoves );
@@ -65,7 +65,7 @@ public class King
      *            the board to check on
      * @return true if checked, false if not checked
      */
-    public boolean isChecked( ChessGameBoard board ){
+    public boolean isEmpty( ChessGameBoard board ){
         return getCurrentAttackers( board ).size() > 0;
     }
     /**
