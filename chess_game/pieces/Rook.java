@@ -1,9 +1,8 @@
 package pieces;
 import javax.swing.ImageIcon;
-
 import board.ChessGameBoard;
-
 import java.util.ArrayList;
+
 // -------------------------------------------------------------------------
 /**
  * Represents a Rook game piece.
@@ -15,7 +14,6 @@ import java.util.ArrayList;
  */
 public class Rook
     extends ChessGamePiece{
-    // private ArrayList<String> possibleMoves;
     // ----------------------------------------------------------
     /**
      * Create a new Rook object.
@@ -43,7 +41,7 @@ public class Rook
         ArrayList<String> southMoves = calculateSouthMoves( board, 8 );
         ArrayList<String> westMoves = calculateWestMoves( board, 8 );
         ArrayList<String> eastMoves = calculateEastMoves( board, 8 );
-        ArrayList<String> allMoves = new ArrayList<String>();
+        ArrayList<String> allMoves = new ArrayList<>();
         allMoves.addAll( northMoves );
         allMoves.addAll( southMoves );
         allMoves.addAll( westMoves );
