@@ -13,7 +13,11 @@ import pieces.ChessGamePiece;
  * @version 2010.11.17
  */
 public class BoardSquare extends JPanel{
-    private int            row;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int            row;
     private int            col;
     private ChessGamePiece piece;
     private JLabel         imageLabel;
