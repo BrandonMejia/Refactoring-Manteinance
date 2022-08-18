@@ -15,6 +15,7 @@ import pieces.Rook;
 import ui.ChessPanel;
 
 import java.awt.GridLayout;
+import java.util.List;
 // -------------------------------------------------------------------------
 /**
  * The panel that represents the Chess game board. Contains a few methods that
