@@ -6,6 +6,7 @@ import javax.swing.ImageIcon;
 
 import board.ChessGameBoard;
 import engine.ChessGameEngine;
+import java.util.List;
 import ui.ChessGraveyard;
 import ui.ChessPanel;
 // -------------------------------------------------------------------------
@@ -640,7 +641,7 @@ public abstract class ChessGamePiece {
      * @return ArrayList<GamePiece> the list of attackers
      */
     public List<ChessGamePiece> getCurrentAttackers(ChessGameBoard board) {
-        ArrayList<ChessGamePiece> attackers = new ArrayList<>();
+        List<ChessGamePiece> attackers = new ArrayList<>();
         int enemyColor =
                 (this.getColorOfPiece() == ChessGamePiece.BLACK)
                         ? ChessGamePiece.WHITE
