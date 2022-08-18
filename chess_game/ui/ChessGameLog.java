@@ -6,14 +6,14 @@ import java.util.Date;
 /**
  * A scrollable textArea representing the game log. (i.e. moves made by each
  * player)
- * 
+ *
  * @author Ben Katz (bakatz)
  * @author Myles David II (davidmm2)
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
 public class ChessGameLog
-    extends JScrollPane{
+        extends JScrollPane{
     private JTextArea textArea;
     // ----------------------------------------------------------
     /**
@@ -21,22 +21,22 @@ public class ChessGameLog
      */
     public ChessGameLog(){
         super(
-            new JTextArea( "", 5, 30 ),
-            JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
-            JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS );
+                new JTextArea( "", 5, 30 ),
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS );
         textArea = ( (JTextArea)this.getViewport().getView() );
     }
     // ----------------------------------------------------------
     /**
      * Adds a new line of text to the log.
-     * 
+     *
      * @param s
      *            the line of text to add
      */
     public void addToLog( String s ){
         if ( textArea.getText().length() > 0 ){
             textArea.setText( textArea.getText() + "\n" + new Date() + " - "
-                + s );
+                    + s );
         }
         else
         {
@@ -52,7 +52,7 @@ public class ChessGameLog
     // ----------------------------------------------------------
     /**
      * Gets the most recent statement added to the log.
-     * 
+     *
      * @return String the most recent log statement
      */
     public String getLastLog(){
